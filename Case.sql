@@ -19,3 +19,15 @@ END
 FROM EmployeeDemographics
 WHERE Age is not null
 ORDER BY Age; 
+
+
+-- Salary Increment with Case --
+SELECT firstname,lastname,jobtitle,salary, 
+ CASE 
+ WHEN jobtitle = 'Salesnan' THEN Salary + (Salary*0.10)
+ WHEN jobtitle = 'Accountant' THEN Salary + (Salary*0.05)
+ ELSE salary + (salary*0.02)
+ END AS IncrementedSalary
+FROM EmployeeDemographics
+INNER JOIN EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID; 
