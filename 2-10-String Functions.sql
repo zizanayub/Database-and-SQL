@@ -34,3 +34,32 @@ FROM EmployeeErrors;
 SELECT EmployeeID, RTRIM(EmployeeID) AS RightTrimmed 
 FROM EmployeeErrors; 
 -- All the spaces on right will be removed by this query -- 
+
+
+-- Replace --
+SELECT LastName, REPLACE(LastName,'- Fired','')
+FROM EmployeeErrors; 
+-- This will replace the existing thing in any variable --
+
+
+-- Substring --
+-- Substring means taking a portion of a variable --
+SELECT Substring(FirstName,1,3)
+FROM EmployeeErrors; 
+-- This will show e.g.'Hal' from 'Halpert' -- 
+
+
+-- Without Substring -- 
+SELECT err.FirstName, dem.FirstName
+FROM EmployeeErrors err 
+JOIN EmployeeDemographics dem
+ON err.firstname = dem.firstname
+-- This will not show any output. Because nobody matched -- 
+
+
+-- With Substring -- 
+SELECT SUBSTRING(err.FirstName,1,3), SUBSTRING(dem.FirstName,1,3) 
+FROM EmployeeErrors err 
+JOIN EmployeeDemographics dem 
+ON SUBSTRING(err.FirstName,1,3) = SUBSTRING(dem.FirstName,1,3); 
+-- two answers came. Jim and Pam -- 
