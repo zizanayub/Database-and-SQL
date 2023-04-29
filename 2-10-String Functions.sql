@@ -17,6 +17,8 @@ Insert into EmployeeErrors Values
 Select * 
 FROM EmployeeErrors; 
 
+-- Trim, Left Trim, RIght Trim, Replace, Upper and Lower, Substring -- 
+
 
 -- TRIM --
 SELECT EmployeeID, TRIM(EmployeeID) as TrimmedID 
