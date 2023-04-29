@@ -63,3 +63,21 @@ FROM EmployeeErrors err
 JOIN EmployeeDemographics dem 
 ON SUBSTRING(err.FirstName,1,3) = SUBSTRING(dem.FirstName,1,3); 
 -- two answers came. Jim and Pam -- 
+
+
+-- Original vs. using substring -- 
+SELECT err.firstname,SUBSTRING(err.FirstName,1,3),dem.firstname,SUBSTRING(dem.FirstName,1,3) 
+FROM EmployeeErrors err 
+JOIN EmployeeDemographics dem 
+ON SUBSTRING(err.FirstName,1,3) = SUBSTRING(dem.FirstName,1,3);
+-- We will see the difference :) -- 
+
+
+-- UPPER and LOWER -- 
+SELECT FirstName, UPPER(FirstName) 
+FROM EmployeeErrors; 
+
+
+SELECT FirstName, LOWER(FirstName) 
+FROM EmployeeErrors; 
+-- they are self-explanatory -- 
