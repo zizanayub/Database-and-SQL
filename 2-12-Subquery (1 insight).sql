@@ -34,3 +34,16 @@ FROM (SELECT EmployeeID, Salary, AVG(Salary) over () AS AllAvgSalary FROM Employ
 SELECT a.employeeid, AllAvgSalary
 FROM (SELECT EmployeeID, Salary, AVG(Salary) over () AS AllAvgSalary FROM EmployeeSalary) a  
 -- This will show 2 variables mentioned -- 
+
+
+-- 6 --
+-- Subquery in WHERE -- 
+
+SELECT EmployeeID, jobtitle, salary 
+FROM EmployeeSalary 
+WHERE EmployeeID IN (
+  SELECT EmployeeID 
+  FROM EmployeeDemographics 
+  WHERE AGE > 30); 
+  
+-- This will show EmployeeID, JobTitle and Salary of Employees who are older than 30 -- 
