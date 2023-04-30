@@ -21,3 +21,16 @@ FROM EmployeeSalary
 -- This will give the same result like 1 no query for 101 --
 -- So using PARTITION BY is the solution -- 
 -- they are showing exactly the SAME -- 
+
+
+-- 4 -- 
+-- Subquery in FROM -- 
+SELECT *
+FROM (SELECT EmployeeID, Salary, AVG(Salary) over () AS AllAvgSalary FROM EmployeeSalary) a
+-- This will show all 3 variables mentioned --
+
+
+-- 5 -- 
+SELECT a.employeeid, AllAvgSalary
+FROM (SELECT EmployeeID, Salary, AVG(Salary) over () AS AllAvgSalary FROM EmployeeSalary) a  
+-- This will show 2 variables mentioned -- 
