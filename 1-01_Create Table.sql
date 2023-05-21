@@ -33,3 +33,18 @@ DESC project01.persons;
 -- Output will show 'Sandes' under Default column in the row with City. 
 
 
+
+
+-- What does AUTO_INCREMENT do?
+/* When a column has the AUTO_INCREMENT attribute, it assigns a new value to the column for each new row inserted into the table, 
+incrementing the value by 1 each time. */
+
+--Example-1(AUTO_INCREMENT)
+Create Table project01.example_table(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name varchar(50)
+);
+
+DESC project01.example_table; 
+
+
