@@ -35,7 +35,7 @@ DESC project01.persons;
 
 
 
--- What does AUTO_INCREMENT do?
+-- 02. What does AUTO_INCREMENT do?
 /* When a column has the AUTO_INCREMENT attribute, it assigns a new value to the column for each new row inserted into the table, 
 incrementing the value by 1 each time. */
 
@@ -47,4 +47,48 @@ name varchar(50)
 
 DESC project01.example_table; 
 
+
+
+
+
+
+-- 03. What is Primary Key?
+/* 
+1. A primary key is a column or set of columns that identifies each row of the column uniquely.
+2. Each table in relational database typically has one primary key.
+*/
+
+-- Example-01. Primary key
+Create Table project01.employees
+(employee_id INT PRIMARY KEY,
+first_name varchar(50),
+last_name varchar(50)
+);
+
+
+
+
+
+-- 04. What is foreign key?
+
+/*
+1. Foreign key references the primary key of another table, creating a connection between two tables 
+based on shared values.
+
+2. A table can have multiple foreign keys.
+*/
+
+
+-- Example-01. Foreign key
+Create Table exercises.customers (
+id INT PRIMARY KEY, 
+name varchar(50)
+);
+
+
+Create Table exercises.orders (
+order_id INT primary key,
+order_number varchar(50),
+customer_id INT, 
+foreign key (customer_id) REFERENCES exercises.customers(id)); 
 
