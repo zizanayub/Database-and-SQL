@@ -92,3 +92,9 @@ order_number varchar(50),
 customer_id INT, 
 foreign key (customer_id) REFERENCES exercises.customers(id)); 
 
+
+
+
+
+-- 05. Why did FOREIGN KEY exercise didn't work?
+
