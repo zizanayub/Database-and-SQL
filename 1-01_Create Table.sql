@@ -98,3 +98,13 @@ foreign key (customer_id) REFERENCES exercises.customers(id));
 
 -- 05. Why did FOREIGN KEY exercise didn't work?
 
+
+
+
+
+-- 06. What is Engine = InnoDB; 
+/*
+1. InnoDB is a storage engine of MySQL
+2. How tha data is stored, accessed and managed within the database, InnoDB engine tells the database all about this.
+3. 
+
