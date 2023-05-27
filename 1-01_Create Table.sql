@@ -106,5 +106,21 @@ foreign key (customer_id) REFERENCES exercises.customers(id));
 /*
 1. InnoDB is a storage engine of MySQL
 2. How tha data is stored, accessed and managed within the database, InnoDB engine tells the database all about this.
-3. 
+*/
+
+
+
+-- 07. What is ON UPDATE CASCADE?
+/*
+When the 'Job_id' column in jobs table are updated, the corresponding column in employees table will also be updated
+*/
+
+
+
+
+
+-- 08. What is ON DELETE RESTRICT?
+/*
+The deletion of the rows from jobs table will be restricted, if the corresponding rows in the 'Employees' table is referencing them.
+*/ 
 
