@@ -124,3 +124,11 @@ When the 'Job_id' column in jobs table are updated, the corresponding column in 
 The deletion of the rows from jobs table will be restricted, if the corresponding rows in the 'Employees' table is referencing them.
 */ 
 
+
+
+--09. What does ON DELETE SET NULL and ON UPDATE SET NULL do?
+/*
+On DELETE SET NULL: The value will be automatically NULL in child table as FOREIGN KEY if the parent value is being deleted.
+ON UPDATE SET NULL: If the parent value updates, the value as FOREIGN KEY will be updated to NULL.
+*/
+
