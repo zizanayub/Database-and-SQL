@@ -1,6 +1,18 @@
 
-| Column 1 | Column 2 | Column 3 |
-| -------- | -------- | -------- |
-| Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
-| Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
+Suppose, there is a table named `Students`. In the `Students` table, there are the columns named:
 
+
+- Student ID
+- Student Name
+- Social Security Number
+- Salary
+- Phone number
+- Email number
+
+
+Like this: 
+
+
+| Student_ID |      Name      |        SSN        |       Salary       |           Phone          |        Email       | 
+| -----------|----------------|-------------------|--------------------|--------------------------|--------------------|
+|  101       |      John     |        AA       |       50000       |           0111890     |        john@abcd.com     | 
