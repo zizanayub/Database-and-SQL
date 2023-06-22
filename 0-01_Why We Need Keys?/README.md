@@ -82,3 +82,10 @@ Result:
 
 ![image](https://github.com/zizanayub/SQL-101/assets/65456659/f7c3b93e-cb2a-4cce-b5bd-56294a52cd91)
 
+
+
+
+▶️ In one word
+
+
+To uniquely, identify the tuples or rows in a table, keys are important. 
