@@ -28,7 +28,7 @@ Like this:
 1. Suppose, we have generated a query to find the salary of "John" and increase his salary by 10%. We have found the salary of "John" and tried to execute the query. But is it right? No, because there are 3 **Johns** in this `Employees` table. 
 
 ▶️ Execute the query by salary amounts
-2. Now, can we find the John's salary with the query of finding the salary amount? No, beacuse that same kind of amount can be matched with multiple people.
+2.  Now, can we find the John's salary with the query of finding the salary amount? No, beacuse that same kind of amount can be matched with multiple people.
 
 ▶️ Execute the query by department names
 3. If I want to execute the query following the department names. That can't be possible also. Because, there can be two **John's** in the same department. 
