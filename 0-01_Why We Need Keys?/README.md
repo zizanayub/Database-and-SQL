@@ -202,15 +202,19 @@ Result:
 
 
 
-# Customer ID	Customer Name	Order ID
-1001	Shihab	101
-1002	John	102
-1003	Shahed	103
-1003	Shahed	103
-1003	Shahed	104
-1003	Shahed	104
-1004	Martin	102
+| Customer ID | Customer Name | Order ID |
+|-------------|---------------|----------|
+| 1001        | Shihab        | 101      |
+| 1002        | John          | 102      |
+| 1003        | Shahed        | 103      |
+| 1003        | Shahed        | 103      |
+| 1003        | Shahed        | 104      |
+| 1003        | Shahed        | 104      |
+| 1004        | Martin        | 102      |
 
+
+
+So, see there are duplicates and data reducndency due to not having primary keys or unique identifiers. 
 
 
 ### 👇 Metaphor to understand:
