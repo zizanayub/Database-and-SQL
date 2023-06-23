@@ -1,4 +1,4 @@
-## Why We Need Keys in Table?
+# 💡 Why We Need Keys in Table?
 
 
 Suppose, there is a table named `Employees`. In the `Employees` table, there are the columns named:
@@ -98,7 +98,7 @@ To uniquely, identify the tuples or rows in a table, keys are important.
 
 
 
-## More Breakdown
+# 💡 More Breakdown
 
 ## ▶️ 01. Uniqueness
 
