@@ -100,7 +100,7 @@ To uniquely, identify the tuples or rows in a table, keys are important.
 
 # 💡 More Breakdown
 
-## ▶️ 01. Uniqueness
+## ▶️ ***01. Uniqueness***
 
 ### 👇 Important points to note
 
@@ -129,7 +129,7 @@ There will be no way to differentiate between records, leading to duplication or
 - It becomes challenging to maintain data integrity.
 - Can create incorrect associations and multiple potential matches.
 
--Example: 
+👇 Example: 
 
 Let's consider a scenario where you have a "Customers" table and an "Orders" table in a database. Without keys, attempting to join these tables is like trying to match customers with their orders based on some general criteria such as name or address. However, this approach can lead to incorrect associations or multiple potential matches. For instance, if two customers have the same name, the join may mistakenly assign orders to the wrong customer or create duplicate entries.
 
@@ -219,3 +219,13 @@ So, see there are duplicates and data reducndency due to not having primary keys
 
 ### 👇 Metaphor to understand:
 Just like, each person has a unique fingerprint to identify. No duplicate fingerprint can't be found. Keys work like fingerprints.
+
+
+
+
+
+## ▶️ ***02. Data Retrieval***
+
+
+***1. How can keys play important role for data retrieval?***
+Keys serve an index number for quick data retrieval. 
