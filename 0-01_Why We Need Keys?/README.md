@@ -359,3 +359,8 @@ Result:
 | Book Name      | Writer      |
 |----------------|-------------|
 | Marketing 101  | Seth Godin  |
+
+
+- In both cases, the final result will be the same but the steps of the process are required more in the 2nd process without keys in the table.
+- Without key, the query of the 2nd process needed more time to execute and it was not efficient.
+- The data retrieval was not fast and took more steps or lines of codes to find out. 
