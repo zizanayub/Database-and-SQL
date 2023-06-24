@@ -263,3 +263,99 @@ There is another table named ***Books_Stored***. The columns are Book_name and W
 
 
 
+
+```SQL
+-- CREATE TABLE named "Books"
+CREATE TABLE Books
+(Book_id int,
+Book_name varchar(30),
+Writer varchar(50));
+```
+
+
+
+```SQL
+-- INSERT VALUES in "Books" Table
+INSERT INTO Books VALUES 
+(101,"Finance and Accounting 1","JC Mosh"),
+(102,"Finance and Accounting 2","Reifard Paul"),
+(103,"Marketing 101","Seth Godin"),
+(104,"Marketing 101","Phillip Kotler"),
+(105,"Marketing 101","DU IBA");
+```
+
+
+
+
+```SQL
+-- Find a marketing book written by Seth Godin (This table includes keys)
+SELECT Book_name, Writer
+FROM Books
+WHERE Book_id = 103; 
+```
+
+
+
+The operator will find the book with 1 try following the index number or primary key. Through the key, the operator will easily be able to identify the book.
+Through the whole process, the query operation has been quicker and efficient has been ensured throughout the whole process. The operator didn't have to check each book one by one.
+
+
+
+
+
+
+On the other hand,
+
+
+```SQL
+-- CREATE TABLE named "Books_Stored"
+CREATE TABLE Books_Stored
+(Book_name varchar(30),
+Writer varchar(50));
+```
+
+
+
+```SQL
+- INSERT VALUES in "Books_Stored" Table
+INSERT INTO Books_Stored VALUES 
+("Finance and Accounting 1","JC Mosh"),
+("Finance and Accounting 2","Reifard Paul"),
+("Marketing 101","Seth Godin"),
+("Marketing 101","Phillip Kotler"),
+("Marketing 101","DU IBA");
+```
+
+
+
+There are no unique identifier or keys to identify the records. 
+
+
+The operator is asked to find the marketing book of a specific writer. The steps he will follow at best is,
+
+- First, he will look for marketing books one by one.
+- And then, he will check the writer's name.
+
+If we tend to showcase the whole scenario in SQL, we will see the operations of `SUBQUERY` and `WHERE` clause. 
+
+
+
+```SQL
+-- Find a marketing book written by Seth Godin
+SELECT Book_name, Writer
+FROM 
+(SELECT Book_name,Writer 
+FROM Books_Stored 
+WHERE Book_name REGEXP "Marketing") Finding_Marketing_Books
+WHERE Writer = "Seth Godin";
+```
+
+
+
+
+Result:
+
+
+| Book Name      | Writer      |
+|----------------|-------------|
+| Marketing 101  | Seth Godin  |
