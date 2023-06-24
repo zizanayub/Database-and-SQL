@@ -129,7 +129,7 @@ There will be no way to differentiate between records, leading to duplication or
 - It becomes challenging to maintain data integrity.
 - Can create incorrect associations and multiple potential matches.
 
-👇 Example: 
+### 👇 Example: 
 
 Let's consider a scenario where you have a "Customers" table and an "Orders" table in a database. Without keys, attempting to join these tables is like trying to match customers with their orders based on some general criteria such as name or address. However, this approach can lead to incorrect associations or multiple potential matches. For instance, if two customers have the same name, the join may mistakenly assign orders to the wrong customer or create duplicate entries.
 
@@ -227,5 +227,39 @@ Just like, each person has a unique fingerprint to identify. No duplicate finger
 ## ▶️ ***02. Data Retrieval***
 
 
-***1. How can keys play important role for data retrieval?***
-Keys serve an index number for quick data retrieval. 
+### 👇 How can keys play important role for data retrieval?***
+
+
+
+
+
+Keys serve an index number for quick data retrieval. When a key is defined as an index, we can execute the query efficiently. It will boost the query performance and speeds up data retrieval operations.  
+
+
+
+### 👇 Example:
+
+
+Suppose, there is a table named books. Where we will find all the list of books a shop has. A customer came and wants to get a specific book named "Marketing 101".
+The computer operator will find out one by one if there is no index number in the table. Or, unique identified or key in the table to find out the specific requested book. 
+
+
+If a new key is introduced in this table, the operator can quickly locate the book name on the table based on the key value. 
+
+
+If there is no key, he whould go one by one book and check which is so much ***time consuming*** and ***not efficient***. 
+
+
+
+
+
+
+
+### 👇 Now lets get a real scenario.
+
+
+There is a table named ***Books***. The columns are Book_id, Book_name, Writer. 
+There is another table named ***Books_Stored***. The columns are Book_name and Writer. In this table, there is no key to identify the unique rows. 
+
+
+
