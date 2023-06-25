@@ -475,7 +475,7 @@ Error Code: 1822. Failed to add the foreign key constraint. Missing index for co
 
 
 
-## ▶️ ***04. Data Integrity and Inconsistency***
+## ▶️ ***04. Data Integrity and consistency***
 
 
 
@@ -544,3 +544,86 @@ INSERT INTO unique_customers VALUES
 (1002, "Shadek","shadek@gmail.com"),
 (1003, "Nuhash",Null);
 ```
+
+
+
+
+
+
+
+
+## ▶️ ***04. Data Inconsistency and Anomalies***
+
+
+### 👇 ***How keys can help to remove data inconsistency and anomalies?**
+Keys enforece contraints and rules that maintain data consistency. Anomalies such as insertion,deletion and updatation of anomalies may occur without keys. Let's have an example:
+
+
+
+💡 Example-1 (How `Insertion Anomaly` may occur?)
+
+
+```SQL
+-- Creating a new table named "new Employees" without any key
+CREATE TABLE New_Employees 
+(employee_id INT,
+employee_name varchar(40),
+department_id INT, 
+department_name varchar(40));
+```
+
+
+Here, we created this table without any key. that means, there is no unique identifier for this table. Now let's intert some values to the table:
+
+
+```SQL
+-- INSERT values to "New Employees" table
+INSERT INTO New_Employees VALUES
+(1,'John',1,'Sales'); 
+
+-- INSERT values to "New Employees" table
+INSERT INTO New_Employees VALUES
+(1,'John',Null,Null); 
+```
+
+
+💡 In the second insertion, There are no records entried for the `department_id` and `department_name` column. If the `PRIMARY KEY` constraint was applied, it would not accept the insertion. 
+
+
+```SQL
+-- Creating a new table named "new Employees" with PRIMARY KEY
+CREATE TABLE New_Employees 
+(employee_id INT,
+employee_name varchar(40),
+department_id INT PRIMARY KEY, 
+department_name varchar(40));
+```
+
+
+```SQL
+-- INSERT values to "New Employees" table
+INSERT INTO New_Employees VALUES
+(1,'John',Null,Null); 
+```
+
+
+Result:
+
+```Error
+Error Code: 1048. Column 'department_id' cannot be null
+```
+
+
+Due to adding the `Primary Key`, the insertion has been restricted. 
+
+
+
+💡 So, without the keys, the insertion of anomalies will be happened.
+- As a result, there will be data inconsistencies.
+- This will lead to wrong analysis and reporting.
+
+
+
+### 👇 ***What is Data Consistency***
+- Data consistency refers to the state of data being accurate, valid, and reliable throughout a database or system. 
+- It ensures that data is in agreement with predefined rules, constraints, and expectations. 
