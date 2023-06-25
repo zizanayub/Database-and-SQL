@@ -428,3 +428,52 @@ INSERT INTO orders_new VALUES
 
 
 The foreign key `customer_id` is associated with the primary key `customer_id` column of the main `customers_new` table. It enforeces the referencial integrity. Which means, no record of non-exixtant customers or not existed in the `customers_new` table will be referenced due to the usage of keys and maintenance of referencial integrity and coherence of database structure. 
+
+
+
+
+
+
+
+## ▶️ ***04. Data Integrity and Inconsistency***
+
+
+
+
+### 👇 Points to mention
+
+
+1. keys enforece data integrity rules and constraints.
+2. A primary key constraint ensures that there will be unique identfiers and no null values.
+3. Constraints prevent inconsistent data to be added, inserted or updated in the table.
+
+
+### 👇 Points to mention
+
+
+
+1. Primary Key Constraint: In the previous `customers_new` column, if we want to add another customer with same customer_id, it will give error. Because `Primary Key Constraint` prevented the inclusion of that specific customer_id in the table due to duplication and data inconsistency.
+
+```SQL
+INSERT INTO customers_new VALUES 
+(1004,"Zizan");
+```
+
+Result:
+
+```Error
+(1004,"Zizan")	Error Code: 1062. Duplicate entry '1004' for key 'customers_new.PRIMARY'
+```
+
+
+
+1. UNIQUE Constraint: In the previous `customers_new` column, if we want to add another column with email_ids and during inserting, if we give any duplicate value, it will give error also. Because like primary key, UNIQUE constraint maintains data consistency and integrity. But the difference is, UNIQUE constraint accepts null value.
+
+
+```SQL
+-- CREATING Unique_Customers table
+CREATE TABLE Unique_customers
+(customer_id int PRIMARY KEY,
+customer_name varchar(50),
+customer_email varchar(40) UNIQUE);
+```
