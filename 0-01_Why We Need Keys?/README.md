@@ -431,6 +431,46 @@ The foreign key `customer_id` is associated with the primary key `customer_id` c
 
 
 
+### 👇 If there is no primary key
+
+```Error
+Error Code: 3730. Cannot drop table 'customers_new' referenced by a foreign key constraint 'orders_new_ibfk_1' on table 'orders_new'.
+```
+
+💡 We can't drop the 'Customer_new' table because, `customers_new` table is referenced by another table. In simple words, they are connected. So, we need to make another table `customers_new2` to prove this portion.
+
+
+💡 We are having two tables again, but this time with no primary keys. Without any primary keys, let's see if we are able to make any connection through foreign keys.
+
+
+```SQL
+-- Creating Table named 'Customers_new2'
+CREATE TABLE customers_new2
+(customer_id int,
+customer_name varchar(50));
+```
+
+
+```SQL
+-- Creating Table named 'Orders_new2'
+CREATE TABLE orders_new2
+(order_id int,
+customer_id int,
+FOREIGN KEY (customer_id) REFERENCES customers_new2(customer_id)); 
+```
+
+
+
+```Error
+Error Code: 1822. Failed to add the foreign key constraint. Missing index for constraint 'orders_new2_ibfk_1' in the referenced table 'customers_new2'
+```
+
+
+
+
+
+
+💡 The code didn't work out. Because for creating foreign key, there has to be a primary key in the parent table. So, it is concluded that we cannot make connections or relationships between multiple tables with the absence of keys, more specifically primary keys.
 
 
 
@@ -476,4 +516,31 @@ CREATE TABLE Unique_customers
 (customer_id int PRIMARY KEY,
 customer_name varchar(50),
 customer_email varchar(40) UNIQUE);
+```
+
+
+```SQL
+-- INSERT INTO unique_customers table
+INSERT INTO unique_customers VALUES 
+(1001, "Shadman","shadman@gmail.com"),
+(1002, "Shadek","shadek@gmail.com"),
+(1003, "Nuhash",Null),
+(1004, "Robiul","shadek@gmail.com");
+```
+
+
+```Error
+Error Code: 1062. Duplicate entry 'shadek@gmail.com' for key 'unique_customers.customer_email'
+```
+
+
+This SQL code gave error because 'shadek@gmail.com' is a duplicate entry. But UNIQUE constraint doesn't allow duplicate entries. But it will allow null values unline `PRIMARY KEY` constraints.
+
+
+```SQL
+-- INSERT INTO customers_new table
+INSERT INTO unique_customers VALUES 
+(1001, "Shadman","shadman@gmail.com"),
+(1002, "Shadek","shadek@gmail.com"),
+(1003, "Nuhash",Null);
 ```
