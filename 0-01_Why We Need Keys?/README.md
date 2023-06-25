@@ -374,6 +374,57 @@ Result:
 
 ### 👇 Points to mention
 
-1. Keys construct relationships between two tables in RDBMS.
-2. Foreign keys in a table reference primary keys in another table, ensuring that related data remains connected and consistent.
+1. Keys construct __relationships__ between two tables in RDBMS.
+2. Foreign keys in a table reference primary keys in another table, ensuring that related data remains __connected and consistent.__
 3. For the keys, there remains the __reference integrity__ and __coherence__ in the database structure. 
+
+
+
+### 👇 Example
+
+
+
+1. There are two tables:
+
+```SQL
+-- CREATING customers_new table
+CREATE TABLE customers_new
+(customer_id int PRIMARY KEY,
+customer_name varchar(50));
+```
+
+
+```SQL
+-- INSERT INTO customers_new table
+INSERT INTO customers_new VALUES 
+(1001, "Shadman"),
+(1002, "Shadek"),
+(1003, "Nuhash"),
+(1004, "Robiul");
+```
+
+
+
+
+```SQL
+-- CREATE orders_new table
+CREATE TABLE orders_new 
+(order_id int PRIMARY KEY,
+order_date date,
+customer_id int,
+FOREIGN KEY (customer_id) REFERENCES customers_new(customer_id));
+```
+
+
+
+```SQL
+INSERT INTO orders_new VALUES
+(1,'2020-01-01',1001),
+(2,'2020-12-03',1002),
+(3,'2020-11-03',1003),
+(4,'2020-12-03',1004); 
+```
+
+
+
+The foreign key `customer_id` is associated with the primary key `customer_id` column of the main `customers_new` table. It enforeces the referencial integrity. Which means, no record of non-exixtant customers or not existed in the `customers_new` table will be referenced due to the usage of keys and maintenance of referencial integrity and coherence of database structure. 
