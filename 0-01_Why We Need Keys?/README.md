@@ -364,3 +364,16 @@ Result:
 - In both cases, the final result will be the same but the steps of the process are required more in the 2nd process without keys in the table.
 - Without key, the query of the 2nd process needed more time to execute and it was not efficient.
 - The data retrieval was not fast and took more steps or lines of codes to find out. 
+
+
+
+
+
+## ▶️ ***03. Relationships and Referencial Integrity***
+
+
+### 👇 Points to mention
+
+1. Keys construct relationships between two tables in RDBMS.
+2. Foreign keys in a table reference primary keys in another table, ensuring that related data remains connected and consistent.
+3. For the keys, there remains the <u>reference integrity</u> and <u>coherence</u> in the database structure. 
