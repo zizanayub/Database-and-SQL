@@ -376,4 +376,4 @@ Result:
 
 1. Keys construct relationships between two tables in RDBMS.
 2. Foreign keys in a table reference primary keys in another table, ensuring that related data remains connected and consistent.
-3. For the keys, there remains the <u>reference integrity</u> and <u>coherence</u> in the database structure. 
+3. For the keys, there remains the __reference integrity__ and __coherence__ in the database structure. 
