@@ -448,7 +448,7 @@ The foreign key `customer_id` is associated with the primary key `customer_id` c
 3. Constraints prevent inconsistent data to be added, inserted or updated in the table.
 
 
-### 👇 Points to mention
+### 👇 Example: 
 
 
 
@@ -467,7 +467,7 @@ Result:
 
 
 
-1. UNIQUE Constraint: In the previous `customers_new` column, if we want to add another column with email_ids and during inserting, if we give any duplicate value, it will give error also. Because like primary key, UNIQUE constraint maintains data consistency and integrity. But the difference is, UNIQUE constraint accepts null value.
+2. UNIQUE Constraint: In the previous `customers_new` column, if we want to add another column with email_ids and during inserting, if we give any duplicate value, it will give error also. Because like primary key, UNIQUE constraint maintains data consistency and integrity. But the difference is, UNIQUE constraint accepts null value.
 
 
 ```SQL
