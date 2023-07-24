@@ -1,4 +1,4 @@
-### ❓ 01. What is a database?
+### ❓ 01. What is a database? 
 
 A database is an organized collection of structured information or data stored in a computer system. 
 
