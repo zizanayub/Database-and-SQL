@@ -29,17 +29,13 @@ Me, "Your suggestion in this regard?"
 
 
 
-***PS, "Create some views. Clients will run those views using select statement and able to see the selective queries."
+**PS, "Create some views. Clients will run those views using select statement and able to see the selective queries."**
 
 
 
 
 Me, "OK. On it."
 
-
-
-
-
-PS, "It is the representative of underlying queries. In that case, if the clients want to have a look at the main database, they will not able to do that for restriction. So, instead of sharing whole SQL file. Do this thing. I hope this is the perfect solution."***
+**PS, "It is the representative of underlying queries. In that case, if the clients want to have a look at the main database, they will not able to do that for restriction. So, instead of sharing whole SQL file. Do this thing. I hope this is the perfect solution."**
 
 
