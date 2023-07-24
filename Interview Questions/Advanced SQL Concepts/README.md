@@ -39,3 +39,24 @@ Me, "OK. On it."
 **PS, "It is the representative of underlying queries. In that case, if the clients want to have a look at the main database, they will not able to do that for restriction. So, instead of sharing whole SQL file. Do this thing. I hope this is the perfect solution."**
 
 
+
+### 1.2. Example:
+
+```SQL
+CREATE VIEW order_summary AS 
+(
+SELECT 
+    c.customer_id,
+    o.order_id,
+    oi.product_id
+FROM customers c
+JOIN orders o 
+    ON c.customer_id = o.customer_id
+JOIN order_items oi
+    ON oi.product_id = o.order_id 
+);
+
+
+
+SELECT * FROM order_summary;
+```
